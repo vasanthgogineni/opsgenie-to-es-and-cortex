@@ -25,5 +25,6 @@ Initially, I set up this project using AWS SNS (Simple Notification Service) and
 However, since we needed Elasticsearch to be setup in a GKE (Google Kubernetes Engine) cluster, we had to migrate the setup to GCP. Opsgenie does not have a direct integration with GCP. So, we had to use Opsgenie's Webhook integration to send alert updates to a Cloud Run service in GCP. The Cloud Run service then directly processes the alerts and writes them to the Elasticsearch cluster in GKE. This eliminated the need to use the Google Pub/Sub, which is the equivalent of AWS SNS. The new workflow is the following:
 
 ## Steps
-#### 1. Set up OpsGenie
+#### 1. Set up Cloud Run Job in GCP
+Open Cloud Shell Editor in GCP.
 ![image](https://github.com/user-attachments/assets/85e7f811-334a-4aef-ad7c-bb59a3b139b0)
