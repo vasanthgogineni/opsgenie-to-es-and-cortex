@@ -5,6 +5,9 @@ The purpose of this project is to consolidate alerts coming to Opsgenie from var
 
 Solution: Leveraging the opsgenie webhook integration, we redirect all the alerts to a Python Flask app, which customizes the alert data and publishes it to Cortex and to Elasticsearch. The timeseries data in Cortex can then be used to build dashboards and the alerts in Elasticsearch can be used to make dashboards using Apache Superset.
 
+Full-stack customized dashboarding workflow by processing Opsgenie alerts using AWS SNS, EC2, and Lambda and writing to Cortex and Elasticsearch database endpoints. Built staging dashboards using Apache Superset, Kibana, and Grafana.
+Migrated the workflow to GCP for integration with GKE Kubernetes clusters. Integrated Opsgenie with GCP using Webhooks and developed GCP Cloud Run service as Flask app Docker images for Linux Alpine. Improved alert resolution time by 40%.
+
 Dashboard in Superset:
 
 <img width="1000" alt="Screenshot 2024-08-12 at 10 17 13 PM" src="https://github.com/user-attachments/assets/b8cc48bb-a85a-4d67-a43e-d15140fe18e0">
